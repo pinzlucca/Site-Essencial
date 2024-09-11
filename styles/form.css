@@ -1,0 +1,88 @@
+.form-orçamento{
+    /* background-image: linear-gradient(180deg, #c0c4d3, #ced1db, #ced1db, #ced1db);  */
+    height: 750px;
+}
+
+h5{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 45px;
+    color:  var(--blue);;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 3%;
+}
+  
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.144);
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    color:  var(--blue);;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+form  textarea::placeholder, form  input::placeholder{
+    color:  var(--blue);
+}
+
+form  textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 110px;
+    color: #ffffff;
+    font-weight: 700;
+    background-color: var(--blue);
+    transition: .2s;
+}
+
+form .btn-enviar input:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px #050e20;
+
+    cursor: pointer;
+}
+
+@media (max-width:850px){
+    .title-so{
+        padding: 7%;
+    }
+}
+
+@media (max-width:630px){
+    form{
+        max-width: 400px;
+    }
+}
+@media (max-width:500px){
+    form{
+        max-width: 300px;       
+    }
+}
+
+@media (max-width:330px){
+    .title-so{
+        font-size: 2rem;
+    }
+    form{
+        max-width: 200px;      
+    }
+}

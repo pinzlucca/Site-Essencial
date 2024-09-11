@@ -1,0 +1,100 @@
+.vagas{
+    margin-top: 1.5rem;
+    background-color: var(--text);
+    padding: 0.5rem;
+    border-radius: 20px;
+    width: 300px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#listaVagas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 5rem;
+}
+h6{
+    color: var(--blue);
+    font-size: 20px;
+}
+
+li{
+    list-style: none;
+}
+
+.vagas div span{
+    color: var(--blue);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.cadastro{
+    width: 140px;
+    
+	margin: 0 auto;
+	padding: 10px;
+	border: none;
+	margin-bottom: 10px;
+	border-radius: 50px;
+
+    font-weight: 500;
+
+    color: var(--blue);
+    background-color: var(--gray);
+
+    transition: all 0.8s;
+}
+
+.cadastro:hover{
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    background-color: var(--blue);
+}
+
+@media (min-width:500px){
+    .vagas{
+        width: 450px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 1rem;
+    }
+}
+
+@media (min-width:600px){
+    .vagas{
+        width: 550px;
+        padding: 1rem;
+        border-radius: 40px;
+    }
+}
+
+@media (min-width:800px){
+    .vagas{
+        width: 750px;
+    }
+}
+
+
+@media (min-width:1000px){
+    .vagas{
+        margin-top: 4rem;
+        width: 950px;
+        height: 95px;
+        padding: 2rem;
+    }
+    .cadastro{
+        width: 150px;
+    }
+    h6{
+        font-size: 24px;
+    }
+}
+
+
+.show { display: flex; }

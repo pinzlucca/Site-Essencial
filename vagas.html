@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vagas Essencial</title>
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="icon" href="assets/IconeCubo.svg">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <a href="index.html"><img src="assets/LOGO-BRANCO.png" alt=""></a> 
+            <ul class="nav" id="nav">
+                <li>
+                    <a id="navlink" class="nav__link" href="#">VAGAS</a>
+                </li>
+                <li>
+                    <a id="navlink" href="index.html#QUEMSOMOS" class="nav__link">QUEM SOMOS</a>
+                </li>
+                <li>
+                    <a id="navlink" href="index.html#nossos-serviços" class="nav__link">NOSSOS SERVIÇOS</a>
+                </li>
+                <li>
+                    <a id="navlink" href="index.html#solicite-orçamento" class="nav__link">SOLICITE UM ORÇAMENTO</a>
+                </li>
+            </ul>
+            <!-- MENU MOBILE -->
+            <button type="button" id="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <!-- VAGAS -->
+
+        <main class="container__vagas">
+            <section>
+                <h5 class="buscar__titulo">BUSCAR VAGAS</h5>
+            
+                <div class="buscar">
+                    <input id="search" type="text" onkeyup="PesquisarFiltro()" placeholder="Vagas" class="cargo">
+                    <select name="cidade" id="cidade" class="cidade__opt" onchange="filtrar()">
+                        <option selected="true" value="0">Cidade</option>
+                        <option value="1">Mogi Guaçu</option>
+                        <option value="2">Mogi Mirim</option>
+                        <option value="3">São João da Boa Vista</option>
+                        <option value="4">Campinas</option>
+                    </select>
+                    <select name="funcao" id="funcao" class="funcao__opt" onchange="filtrar()">
+                        <option selected="true" value="0">função</option>
+                        <option value="6">Produção</option>
+                        <option value="7">Limpeza</option>
+                        <option value="8">Segurança</option>
+                        <option value="9">Supermercado</option>
+                    </select>
+                    <!-- <button type="button" class="pesquisar" onclick="filtrar()">Pesquisar</button> -->
+                </div>
+            </section>
+
+            <section class="background__vagas">
+                <ul id="listaVagas">
+                    <li>
+                        <div class="vagas" data-cidade="2" data-funcao="6">
+                            <div>
+                                <h6 class="item-name">Ajudante de Produção</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Mirim - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/ajudante-de-producao-2367/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="2" data-funcao="6">
+                            <div>
+                                <h6 class="item-name">Ajudante de Pátio</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Mirim - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/ajudante-de-manutencao-jr-mogi-guacu-4537/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="0">
+                            <div>
+                                <h6 class="item-name">Auxiliar Administrativo - Enfâse em RH/DP</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/auxiliar-administrativo-enfase-em-rhdp-5825/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="7">
+                            <div>
+                                <h6 class="item-name">Auxiliar de Limpeza</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/auxiliar-de-limpeza-2457/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="vagas" data-funcao="7">
+                            <div>
+                                <h6 class="item-name" data-cidade="1">Auxiliar de Limpeza Horitsta</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/auxiliar-de-limpeza-2370/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="6">
+                            <div>
+                                <h6 class="item-name">Auxiliar de Produção</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/auxiliar-de-producao-4212/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="9">
+                            <div>
+                                <h6 class="item-name">Açougueiro(a)</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/acougueiro-a-2348/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="9">
+                            <div>
+                                <h6 class="item-name">Balconista de Açougue</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/balconista-de-acougue-2445/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="9">
+                            <div>
+                                <h6 class="item-name">Balconista de Padaria</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/balconista-de-padaria-2442/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Controlador de Acesso</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/controlador-a-de-acesso-2375/br/" target="_blank" >
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="3" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Controlador de Acesso</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">São João da Boa Vista - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/controlador-a-de-acesso-2376/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Controlador de Acesso - Noturno</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/recepcionista-noturna-2447/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Controlador de Acesso Diurno</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/recepcionista-diurno-2446/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Controlador de Acesso Diurno 12x36</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/controladora-de-acesso-diurno-12x36-5254/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Controlador de Acesso Noturno 12x36</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/controladora-de-acesso-noturno-12x36-5255/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="6">
+                            <div>
+                                <h6 class="item-name">Eletricista Industrial</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/eletricista-industrial-3543/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="2" data-funcao="6">
+                            <div>
+                                <h6 class="item-name">Eletromecânico</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Mirim - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/eletromecanico-2459/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="9">
+                            <div>
+                                <h6 class="item-name">Empacotador (a)</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/empacotador-a-2419/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1">
+                            <div>
+                                <h6 class="item-name">Estágio em Qualidade</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/estagio-em-qualidade-4211/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Fiscal de Piso</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/fiscal-de-piso-2317/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="vagas" data-cidade="4" >
+                            <div>
+                                <h6 class="item-name" >Líder de Recepção - Campinas</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Campinas - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/lider-de-recepcao-campinas-5714/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="2" data-funcao="6">
+                            <div>
+                                <h6 class="item-name">Mecânico Industrial</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Mirim - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/mecanico-industrial-3544/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1">
+                            <div>
+                                <h6 class="item-name">Motorista B</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/motorista-2461/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="9">
+                            <div>
+                                <h6 class="item-name">Operador (a) de Caixa </h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/operador-a-de-caixa-2462/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="9">
+                            <div>
+                                <h6 class="item-name">Padeiro / Forneiro</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/padeiro-forneiro-2418/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Porteiro Ferista</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/porteiro-ferista-2449/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="4">
+                            <div>
+                                <h6 class="item-name">Recepcionista (o) - Campinas </h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Campinas - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/recepcionista-o-campinas-5716/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="9">
+                            <div>
+                                <h6 class="item-name">Repositor (a) de Mercadorias </h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/repositor-a-de-mercadorias-2386/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="0">
+                            <div>
+                                <h6 class="item-name">TRABALHE NA ESSENCIAL</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/trabalhe-na-essencial-3350/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8"> 
+                            <div>
+                                <h6 class="item-name">Vigia / Brigadista 12x36</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/vigia-brigadista-12x36-2499/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Vigia / Brigadista 6x1</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/vigia-brigadista-6x1-2500/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Vigia 12x36</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/vigia-12x36-2502/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Vigia 6x1</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/vigia-6x1-2501/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Vigia Ronda D/N Motorizado 12x36</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/vigia-ronda-dn-motorizado-12x36-5253/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Vigia Ronda D/N Motorizado Diurno 12x36</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/vigia-ronda-motorizado-diurno-12x36-5246/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="vagas" data-cidade="1" data-funcao="8">
+                            <div>
+                                <h6 class="item-name">Vigia Ronda D/N Motorizado Noturno 12x36</h6>
+                                <span><img src="assets/PIN.webp" alt="" width="12px">Mogi Guaçu - SP</span>
+                            </div>
+                            <div>
+                                <a href="https://zinrecbr.intervieweb.it/millantavaresapoioadministrativo/jobs/vigia-ronda-motorizado-noturno-12x36-5252/br/" target="_blank">
+                                    <button type="button" class="cadastro">Candidatar-se</button>
+                                </a>                                
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <!-- RODAPÉ -->
+                <footer>
+                    <div class="footer">
+                        <div class="container-contato">
+                            <img src="assets/LOGOTESTE.png">
+                            <a href="https://wa.me/05519988862213?text=Entre%20em%20contato%20conosco"><button>Fale com a gente! <img class="wpp-1" src="assets/wpp-1.png"></img></button></a>
+                                <span></a> 
+                                Rua Noel Franco da Silva 139;<br>
+                                Lote Pq Real Mogi Guaçu;<br>
+                                13845-070
+                            </span>
+                        </div>
+                        
+                        <div class="container-navaqui">
+                            <span>
+                                Navegue por aqui<br>
+                                <a href="vagas.html">Vagas</a> <br> 
+                                <a href="#QUEMSOMOS">Quem Somos</a> <br>
+                                
+                                <a href="#solicite-orçamento">Solicite Orçamento</a> <br>
+                                <a href="#nossos-serviços">Nossos Serviços</a> | <a href="LGPD.html">Privacidade</a>
+                            </span>
+                        </div>
+                        <div class="container-institu">
+                            <span>
+                                Institucional <br>
+                                comercial@essencial.com.br <br>
+                                (19) 3569-7010 | 3569-7011 <br>
+                                <span class="footer-icon">
+                                    <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                                        <img src="assets/faceicon2.png" alt="">
+                                    </a>
+                
+                                    <a href="https://www.instagram.com/grpessencial/" target="_blank">
+                                        <img src="assets/instaicon2.png" alt="">
+                                    </a>
+                
+                                    <a href="https://br.linkedin.com/company/grpessencial" target="_blank">
+                                        <img src="assets/LinkIcon.png" alt="">
+                                    </a>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="direitos-reservados">
+                        <span>
+                            © Essencial todos os direitos reservados
+                        </span>
+                    </div>
+                </footer>
+            <div class="loader">
+                <div class="wrapper">
+                    <div class="box-wrap">
+                        <div class="box one"></div>
+                        <div class="box two"></div>
+                        <div class="box three"></div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        </main>
+    </div>
+    <script src="./js/index.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/mobilebtn.js"></script>
+</body>
+</html>

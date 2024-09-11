@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Essencial LGPD</title>
+
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="icon" href="assets/IconeCubo.svg">
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./js/reveal.js" defer></script>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <a href="index.html"><img src="assets/LOGO-BRANCO.png" alt=""></a> 
+            <ul class="nav" id="nav">
+                <li>
+                    <a id="navlink" class="nav__link" href="vagas.html">VAGAS</a>
+                </li>
+                <li>
+                    <a id="navlink" href="index.html#QUEMSOMOS" class="nav__link">QUEM SOMOS</a>
+                </li>
+                <li>
+                    <a id="navlink" href="index.html#nossos-serviços" class="nav__link">NOSSOS SERVIÇOS</a>
+                </li>
+                <li>
+                    <a id="navlink" href="index.html#solicite-orçamento" class="nav__link">SOLICITE UM ORÇAMENTO</a>
+                </li>
+            </ul>
+            <!-- MENU MOBILE -->
+            <button type="button" id="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+        <main>
+            <!-- FORMULARIO CSS: form -->
+             <section class="requisicao-container">
+                <h5>Portal de Requisição de Titulares de Dados Pessoais</h5>
+                <p>
+                    Caso o titular deseje esclarecer alguma dúvida adicional sobre a privacidade e proteção de seus dados pessoais, pedimos a gentileza de nos
+                    contatar por este Portal de Requisição do Titular de Dados Pessoais ou, caso prefira, diretamente junto ao encarregado pelo tratamento de dados
+                    pessoais (DPO), Sr. Fernando Pedro, através do e-mail: lgpd@essencial.com.br. <br><br>
+                    De acordo com a LGPD – Lei Geral de Proteção de Dados, você poderá solicitar para à ESSENCIAL como é feito o tratamento dos dados pessoais.
+                    Antes de mais nada é muito importante que você acesse a política de privacidade da LGPD. <br> <br>
+                    É o serviço que permite ao titular de dados pessoais obter as seguintes informações em relação aos seus dados pessoais:<br><br>
+                    1.Confirmação da existência de tratamento; <br> 
+                    2.Acesso aos dados; <br>
+                    3.Correção de dados incompletos, inexatos ou desatualizados; <br>
+                    4.Anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade com o disposto na lei nº
+                    13.709/2018; <br> 
+                    5.Portabilidade dos dados a outro fornecedor de serviço ou produto, mediante requisição expressa, de acordo com a regulamentação da autoridade
+                    nacional, observados os segredos comercial e industrial; <br> 
+                    6.Eliminação dos dados pessoais tratados com o consentimento do titular, exceto nas hipóteses previstas no art. 16 da lei nº 13.709/2018; <br>
+                    7.Informação sobre as entidades públicas ou privadas com as quais o controlador realizou uso compartilhado de dados; <br>
+                    8.Informação sobre a possibilidade de não fornecer consentimento e sobre as consequências da negativa; <br>
+                    9.Revogação do consentimento, nos termos do § 5º do art. 8º da lei n. 13.709/2018.
+                    Lei n. 13.709, de 14 de agosto de 2018 – Dispõe sobre a proteção de dados pessoais
+                </p>
+             </section>
+             <section class="form-orçamento" id="solicite-orçamento">
+                <div class="checkbox-container">
+                    <span class="checkbox-title">Sou um:</span>
+                    <div>
+                        <input type="checkbox" id="titularDados" name="titularDados" />
+                        <label for="titularDados">Titular de dados</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="exFunc" name="exFunc" />
+                        <label for="exFunc">Ex-funcionário</label>
+                    </div>
+                </div>
+        
+                <div class="checkbox-container">
+                    <span class="checkbox-title">Selecione o(s) tipo(s) de solicitações</span>
+                    <div>
+                        <input type="checkbox" id="acessoDados" name="acessoDados" />
+                        <label for="acessoDados">Acesso aos dados/portabilidade</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="pedidoExclusao" name="pedidoExclusao" />
+                        <label for="pedidoExclusao">Pedido de exclusão</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="atualizacaoDados" name="atualizacaoDados" />
+                        <label for="atualizacaoDados">Atualização dos dados</label>
+                    </div>
+                </div>
+        
+                <div class="container-formlgpd">
+                    <h5 class="titular-title">Campos Obrigatórios para o Titular dos Dados:</h5>
+                    <form id="contactForm" class="formLgpd">
+                        <div class="container-grid">
+                            <input class="inputLgpd" type="text" id="nome" placeholder="Nome Completo" name="nome" required>
+                            <input class="inputLgpd" type="email" id="email" placeholder="Email" name="email" required>
+                            <input class="inputLgpd" type="text" id="cpf" placeholder="CPF" name="cpf" required>
+                            <input class="inputLgpd" type="text" id="data-nascimento" placeholder="Data de Nascimento" name="data-nascimento" required>
+                            <textarea id="mensagemLgpd1" placeholder="Sua mensagem" name="mensagemLgpd1"></textarea>
+                        </div>
+                        
+                        <h5 class="titular-title">Campos Obrigatórios para o responsável legal de Titular dos Dados criança e/ou adolescente e curatelados:</h5>
+                        <div class="container-grid">
+                            <input class="inputLgpd" type="text" id="nomeResponsavel" placeholder="Nome Completo" name="nomeResponsavel">
+                            <input class="inputLgpd" type="email" id="emailResponsavel" placeholder="Email" name="emailResponsavel">
+                            <input class="inputLgpd" type="text" id="cpfResponsavel" placeholder="CPF" name="cpfResponsavel">
+                            <input class="inputLgpd" type="text" id="dataNascimentoResponsavel" placeholder="Data de Nascimento" name="dataNascimentoResponsavel">
+                        </div>
+                        <textarea id="mensagemLgpd2" placeholder="Sua mensagem" name="mensagemLgpd2"></textarea>
+                        <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                    </form>
+                    <div id="response"></div>
+                </div>
+               <!-- RODAPÉ -->
+            <footer>
+                <div class="footer">
+                    <div class="container-contato">
+                        <img src="assets/LOGOTESTE.png">
+                        <a href="https://wa.me/05519988862213?text=Entre%20em%20contato%20conosco"><button>Fale com a gente! <img class="wpp-1" src="assets/wpp-1.png"></img></button></a>
+                            <span></a> 
+                            Rua Noel Franco da Silva 139;<br>
+                            Lote Pq Real Mogi Guaçu;<br>
+                            13845-070
+                        </span>
+                    </div>
+                    
+                    <div class="container-navaqui">
+                        <span>
+                            Navegue por aqui<br>
+                            <a href="vagas.html">Vagas</a> <br> 
+                            <a href="#QUEMSOMOS">Quem Somos</a> <br>
+                            
+                            <a href="#solicite-orçamento">Solicite Orçamento</a> <br>
+                            <a href="#nossos-serviços">Nossos Serviços</a> | <a href="LGPD.html">Privacidade</a>
+                        </span>
+                    </div>
+                    <div class="container-institu">
+                        <span>
+                            Institucional <br>
+                            comercial@essencial.com.br <br>
+                            (19) 3569-7010 | 3569-7011 <br>
+                            <span class="footer-icon">
+                                <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                                    <img src="assets/faceicon2.png" alt="">
+                                </a>
+            
+                                <a href="https://www.instagram.com/grpessencial/" target="_blank">
+                                    <img src="assets/instaicon2.png" alt="">
+                                </a>
+            
+                                <a href="https://br.linkedin.com/company/grpessencial" target="_blank">
+                                    <img src="assets/LinkIcon.png" alt="">
+                                </a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="direitos-reservados">
+                    <span>
+                        © Essencial todos os direitos reservados
+                    </span>
+                </div>
+            </footer>
+            <div class="loader">
+                <div class="wrapper">
+                    <div class="box-wrap">
+                        <div class="box one"></div>
+                        <div class="box two"></div>
+                        <div class="box three"></div>
+                    </div>
+                </div> 
+            </div>  
+        </main>
+    </div>   
+    <script src="./js/index.js"></script>
+    <script src="./js/mobilebtn.js"></script>       
+        <script>
+                document.getElementById('contactForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const data = {
+                        formType: 'lgpd',
+                        titularDados: document.getElementById('titularDados').checked,
+                        exFunc: document.getElementById('exFunc').checked,
+                        acessoDados: document.getElementById('acessoDados').checked,
+                        pedidoExclusao: document.getElementById('pedidoExclusao').checked,
+                        atualizacaoDados: document.getElementById('atualizacaoDados').checked,
+                        nome: document.getElementById('nome').value,
+                        email: document.getElementById('email').value,
+                        cpf: document.getElementById('cpf').value,
+                        dataNascimento: document.getElementById('data-nascimento').value,
+                        mensagemLgpd1: document.getElementById('mensagemLgpd1').value,
+                        nomeResponsavel: document.getElementById('nomeResponsavel').value,
+                        emailResponsavel: document.getElementById('emailResponsavel').value,
+                        cpfResponsavel: document.getElementById('cpfResponsavel').value,
+                        dataNascimentoResponsavel: document.getElementById('dataNascimentoResponsavel').value,
+                        mensagemLgpd2: document.getElementById('mensagemLgpd2').value
+                    };
+
+                    fetch('http://localhost:3000/api/formulario', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data.message); // Usar alert para mostrar a mensagem
+                    })
+                    .catch((error) => {
+                        console.error('Erro:', error);
+                        alert('Ocorreu um erro ao enviar o formulário.');
+                    });
+                });
+    </script>
+</body>
+</html>

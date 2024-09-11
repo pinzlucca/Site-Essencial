@@ -1,0 +1,142 @@
+.nossos-clientes{
+    background-color: rgba(255, 255, 255, 0.623);
+    height: 250px;
+    width: 100%;
+    }
+
+    .teste{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    h4{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 45px;
+    color: var(--blue);
+    text-align: center;
+    padding-top: 1rem;
+    }
+    
+    .slideshow-container {
+    width: 80%;
+    padding: 50px;
+    overflow: hidden;
+    position: relative;
+    }
+    
+    .slides-Clientes {
+    display: flex;
+    transition: transform 1s ease;
+    }
+    
+    .slideCliente {
+    display: flex;
+    min-width: 100%;
+    justify-content: space-around;
+    }
+    
+    .slideCliente img {
+    width: 200px;
+    margin: 0 5px;
+    height: 50px;
+    }
+    
+    .sliderC{
+        display: none;
+    }
+    .slideContainer{
+        display: none;
+    }
+
+
+    @media (max-width:1600px){
+
+        .slideshow-container {
+    width: 100%;
+    }
+    }
+
+
+@media (max-width:1200px){
+
+    .teste{
+        display: none;
+    }
+
+    .slideshow-container{
+        display: none;
+    }
+
+    .slideCliente {
+        display: none;
+    }
+
+    .sliderC{
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .displaySlide{
+        display: block;
+      }
+    
+      img.displaySlide{
+        display: block;
+      }
+}
+
+
+
+.sliderC{
+    display: none;
+}
+
+.slideContainer{
+    display: none;
+}
+
+
+@media (max-width:1200px){
+
+    .nossos-clientes{
+        height: 280px;
+    }
+
+    .sliderC{
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+      }
+    
+      .sliderC img{
+        padding: 60px 50px;
+        margin: auto;
+        max-width: 400px;
+        max-height: 200px;
+        display: none;
+      }
+    
+      .displaySlide{
+        display: block;
+      }
+    
+      img.displaySlide{
+        display: block;
+      }
+    
+}
+
+@media (max-width:380px){
+    .sliderC img{
+        max-width: 280px;
+     
+      }
+}
+
+

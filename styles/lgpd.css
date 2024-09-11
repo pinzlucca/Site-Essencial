@@ -1,0 +1,286 @@
+h6{
+    color: var(--blue);
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+li{
+    list-style: none;
+}
+
+.section__lgpd{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+
+.container__lgpd{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__lgpd img{
+    width: 50%;
+}
+
+.img__lgpd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .img1__lgpd{
+    margin-left: 30px;
+}
+
+.img2__lgpd{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-right: 30px;
+} */
+
+.encarregadoTratamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    height: 200px;
+    width: 700px;
+
+}
+
+.container__tratamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lgpd__title{
+    padding-top: 3rem;
+}
+
+.container__politicaP{
+    height: fit-content;
+    width: 76%;
+    margin-left: 12%;
+    margin-right: 12%;
+    background-color: var(--text);
+    border-radius: 20px;
+
+    margin-top: 2.5rem;
+}
+
+.container__politicaP div{
+    margin-bottom: 5rem;
+}
+
+.container__politicaP div p {
+    color: black;
+    font-size: 1.15rem;
+    text-align: left;
+    padding-top: 2rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    margin-bottom: 0rem;
+}
+
+
+.container__tratamento div span{
+    color: var(--blue);
+    padding-top: 30px;
+    font-weight: 600;
+}
+
+.btn__acessar{
+    width: 200px;
+    height: 55px;
+    margin-top: 35px;
+    
+    
+	padding: 5px;
+	border: none;
+    
+	margin-bottom: 5px;
+	border-radius: 15px;
+
+    font-weight: 500;
+
+    color: var(--text);
+    background-color: var(--blue);
+
+    transition: all 0.8s;
+}
+
+.btn__acessar:hover{
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    background-color: var(--blue);
+}
+
+.inverte__colum{
+    display: grid;
+    grid-template-columns: 100% 100%; 
+}
+
+
+@media (max-width: 1500px){
+    .encarregadoTratamento{
+        height: 160px;
+        width: 620px;
+    }
+
+    .container__lgpd img{
+        width: 60%;
+    }
+}
+
+@media (max-width: 1100px){
+    .encarregadoTratamento{
+        height: 150px;
+        width: 620px;
+        padding: 10px;
+    }
+
+    .container__lgpd img{
+        width: 75%;
+    }
+
+    .btn__acessar{
+        width: 170px;
+        height: 50px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1100px){
+    .encarregadoTratamento{
+        height: 150px;
+        width: 620px;
+        padding: 10px;
+    }
+
+    
+    .container__lgpd img{
+        width: 75%;
+    }
+
+    .btn__acessar{
+        width: 170px;
+        height: 50px;
+        margin-top: 10px;
+    }
+
+    .container__tratamento div span{
+        padding-top: 15px;
+    }
+
+    .container__politicaP div p {
+        padding-top: 2rem;
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+
+    h5{
+      font-size: 2.4rem;
+    }
+    
+}
+
+@media (max-width: 800px){
+    
+    .container__lgpd{
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: center;
+    }
+
+    .inverte__colum{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .encarregadoTratamento{
+        height: 150px;
+        width: 620px;
+        padding: 10px;
+    }
+    
+    .container__lgpd img{
+        width: 75%;
+    }
+
+    .btn__acessar{
+        width: 170px;
+        height: 50px;
+        margin-top: 10px;
+    }
+
+    .container__tratamento div span{
+        padding-top: 15px;
+    }
+
+    .container__politicaP{
+        height:fit-content;
+    }
+
+    .container__politicaP div p{
+        font-size: 1rem;
+    }
+
+    .container__politicaP div p {
+        padding-top: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    h5{
+      font-size: 2.2rem;
+    }
+
+}
+
+@media (max-width: 450px){
+    h6{
+        font-size: 1.125rem;
+    }
+    
+    .lgpd__title{
+        font-size: 2.25rem;
+    }
+
+    .container__politicaP div p {
+        padding-top: 2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    h5{
+      font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 365px){
+    h6{
+        font-size: 1rem;
+    }
+
+    .btn__acessar{
+        width: 130px;
+        height: 50px;
+    }
+
+    .container__tratamento div span{
+        font-size: 0.85rem;
+    }
+
+    .lgpd__title{
+        font-size: 2rem;
+    }
+
+}
