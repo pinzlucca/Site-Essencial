@@ -82,7 +82,7 @@ app.post('/api/formulario', async (req, res) => {
     }
 
     try {
-        await sendEmail('luccapinz@essencial.com.br', subject, text); // Envie para seu e-mail
+        await sendEmail('', subject, text); // Envie para seu e-mail
         res.json({ message: 'Formulário enviado com sucesso!' });
     } catch (error) {
         console.error('Erro ao enviar e-mail:', error);
