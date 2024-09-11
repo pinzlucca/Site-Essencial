@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 // Função para enviar e-mail
 const sendEmail = (to, subject, text) => {
     const mailOptions = {
-        from: 'luccapinz@essencial.com.br', // Seu e-mail
+        from: '', // Seu e-mail
         to: to,
         subject: subject,
         text: text
