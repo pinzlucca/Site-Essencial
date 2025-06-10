@@ -82,15 +82,15 @@
   }
   
   .card:nth-child(1):before {
-    background-image: url(../assets/Portaria.webp)
+    background-image: url(../images/Portaria.webp)
   }
   
   .card:nth-child(2):before {
-    background-image: url(../assets/Limpeza.webp)
+    background-image: url(../images/Limpeza.webp)
   }
   
   .card:nth-child(3):before {
-    background-image: url(../assets/Manutencao.webp)
+    background-image: url(../images/Manutencao.webp)
   }
   
   .content {

@@ -16,10 +16,10 @@
 .home{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-around;
 
-    width: 100%;
-    max-width: 1700px;
+    margin-left: 25%;
+    width: 50%;
 
     column-gap: 140px;
     padding-top: 2rem;
